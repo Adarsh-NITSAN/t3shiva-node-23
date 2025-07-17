@@ -1,0 +1,115 @@
+[data-pricing-dynamic][data-value-active="yearly"] {
+  .dynamic-value {
+    &:before {
+      display: inline-block;
+      content: attr(data-yearly);
+    }
+  }
+  [data-pricing-trigger] {
+    background: $primary-color;
+    span {
+      left: calc(100% - 33px);
+    }
+  }
+}
+[data-pricing-dynamic][data-value-active="monthly"] {
+  .dynamic-value {
+    &:before {
+      display: inline-block;
+      content: attr(data-monthly);
+    }
+  }
+}
+
+.dynamic-value {
+  &:before {
+    display: inline-block;
+    content: attr(data-active);
+  }
+}
+.static-value {
+  &:before {
+    display: inline-block;
+    content: attr(data-active);
+  }
+}
+
+.pricing-card {
+  background-color: $white;
+  border-radius: 10px;
+
+  &.full-height {
+    height: 100%;
+  }
+
+  &.bg-blue {
+    .small-title,
+    .text-blackish-blue,
+    .text-black,
+    .btn-green,
+    .price-content {
+      color: $white !important;
+    }
+
+    .rte-block {
+      p {
+        color: $white;
+      }
+
+      ul {
+        li {
+          border-top-color: rgba(231, 233, 237, 0.13);
+          color: $white;
+        }
+      }
+    }
+
+    .border-top {
+      border-color: rgba(231, 233, 237, 0.13) !important;
+    }
+  }
+}
+
+.rte-block {
+  margin-top: 1.875rem;
+  margin-bottom: 0.5rem;
+
+  p {
+    color: #000;
+  }
+
+  ul {
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+      border-top: 1px solid var(--border-color);
+      color: #000;
+      list-style: none;
+      padding: 1.25rem 0;
+
+      p {
+        margin-bottom: 0;
+        color: inherit;
+      }
+    }
+  }
+}
+
+.badge {
+  min-width: 95px;
+  min-height: 29px;
+  background-color: color-mix(in srgb, var(--primary) 10%, $white);
+  color: $primary-color;
+  text-transform: uppercase;
+}
+
+.period {
+  color: $body-color;
+}
+
+.pricing-hading {
+  span {
+    color: $headings-color;
+  }
+}

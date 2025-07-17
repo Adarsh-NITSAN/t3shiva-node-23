@@ -1,0 +1,42 @@
+.accordion {
+  max-width: 730px;
+  margin: auto;
+
+  .accordion-button {
+    padding: 0;
+    margin: 0;
+    letter-spacing: -0.5px;
+    line-height: 1.5;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+    font-size: calc(20px + 0.075vw);
+    font-weight: $bold-weight;
+    color: $headings-color;
+    @include desktops {
+      font-size: 21px;
+    }
+
+    &::before {
+      content: "\ea05";
+      font-family: "Grayic";
+      position: absolute;
+      right: 0;
+      font-size: 32px;
+      display: block;
+      line-height: 1;
+      transform: rotate(0deg);
+      transition: 0.4s;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &[aria-expanded="true"] {
+      &::before {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}

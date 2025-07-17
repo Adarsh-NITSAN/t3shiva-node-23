@@ -1,0 +1,119 @@
+//-------------------------
+//-- Spacings Variables
+//-------------------------
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.375,
+  3: $spacer * 0.5,
+  4: $spacer * 0.625,
+  5: $spacer * 0.75,
+  6: $spacer,
+  7: $spacer * 1.25,
+  8: $spacer * 1.5625,
+  9: $spacer * 1.875,
+  10: $spacer * 2.1875,
+  11: $spacer * 2.5,
+  12: $spacer * 2.8125,
+  13: $spacer * 3.125,
+  14: $spacer * 3.4375,
+  15: $spacer * 3.75,
+  16: $spacer * 4.0625,
+  17: $spacer * 4.375,
+  18: $spacer * 4.6875,
+  19: $spacer * 5,
+  20: $spacer * 5.3125,
+  21: $spacer * 5.625,
+  22: $spacer * 5.9375,
+  23: $spacer * 6.25,
+  24: $spacer * 6.875,
+  25: $spacer * 7.5,
+  26: $spacer * 8.125,
+  27: $spacer * 8.4375,
+  28: $spacer * 9.0625,
+  29: $spacer * 9.375,
+  30: $spacer * 9.6875,
+  31: $spacer * 10.625,
+  32: $spacer * 11.25,
+  33: $spacer * 12.5,
+  34: $spacer * 14.0625,
+  35: $spacer * 15.625,
+);
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+        .#{$abbrev}#{$infix}-#{$size} {
+          #{$prop}: $length !important;
+        }
+        .#{$abbrev}t#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+        .#{$abbrev}r#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+        .#{$abbrev}b#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+        .#{$abbrev}l#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
+    }
+
+    // Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+    @each $size, $length in $spacers {
+      @if $size != 0 {
+        .m#{$infix}-n#{$size} {
+          margin: -$length !important;
+        }
+        .mt#{$infix}-n#{$size},
+        .my#{$infix}-n#{$size} {
+          margin-top: -$length !important;
+        }
+        .mr#{$infix}-n#{$size},
+        .mx#{$infix}-n#{$size} {
+          margin-right: -$length !important;
+        }
+        .mb#{$infix}-n#{$size},
+        .my#{$infix}-n#{$size} {
+          margin-bottom: -$length !important;
+        }
+        .ml#{$infix}-n#{$size},
+        .mx#{$infix}-n#{$size} {
+          margin-left: -$length !important;
+        }
+      }
+    }
+
+    // Some special margin utils
+    .m#{$infix}-auto {
+      margin: auto !important;
+    }
+    .mt#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-top: auto !important;
+    }
+    .mr#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-right: auto !important;
+    }
+    .mb#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-bottom: auto !important;
+    }
+    .ml#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-left: auto !important;
+    }
+  }
+}

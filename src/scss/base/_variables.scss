@@ -1,0 +1,45 @@
+:root {
+  --primary: #473bf0;
+  --secondary: #027b3f;
+  --tertiary: #e12b2b;
+  --color-headings: #151b2c;
+  --font-size: 16px;
+  --line-height: 24px;
+  --font-primary: var(--circular-std);
+  --cookieBtnBgColor: transparent;
+  --cookieBtnTextColor: "#FFFFFF";
+}
+
+//****************************************************************************
+//  Font Weight
+//***************************************************************************/
+$font-primary: "Circular Std", sans-serif !default;
+$thin-weight: 100;
+$extralight-weight: 200;
+$light-weight: 300;
+$regular-weight: 400;
+$medium-weight: 500;
+$semibold-weight: 600;
+$bold-weight: 700;
+$extrabold-weight: 800;
+$black-weight: 900;
+
+//****************************************************************************
+//  color
+//***************************************************************************/
+
+$primary-color: var(--primary);
+$secondary-color: var(--secondary);
+$tertiary-color: var(--tertiary);
+$blackish-blue: #13151c;
+$headings-color: var(--color-headings);
+$body-color: var(--color-texts-opacity);
+$border-color: #e7e9ed;
+$blackish-blue-opacity: rgba(#161c2d, 0.7);
+
+// box-shadow
+$box-shadow-1: 0 34px 33px -23px rgba(22, 28, 45, 0.13);
+$box-shadow-2: 0 31px 34px -20px rgba(0, 0, 0, 0.09);
+$box-shadow-3: 0 42px 44px -10px rgba(1, 23, 48, 0.12);
+$box-shadow-4: 0 32px 54px rgba(22, 28, 45, 0.16);
+$box-shadow-5: 0 30px 44px rgba(13, 21, 46, 0.09);

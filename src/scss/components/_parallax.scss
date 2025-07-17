@@ -1,0 +1,14 @@
+.bg-parallax-image {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 350px;
+  @include tablet {
+    height: 500px;
+  }
+
+  @include desktops {
+    height: 792px;
+  }
+}

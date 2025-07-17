@@ -1,0 +1,99 @@
+.slider-section {
+  &.slider-full-width-section {
+    .carousel-item {
+      min-height: 100vh;
+    }
+  }
+
+  .carousel-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    position: relative;
+    min-height: 75vh;
+
+    @include media-breakpoint-up(md) {
+      min-height: 85vh;
+    }
+
+    &.with-text {
+      z-index: 0;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(18, 34, 65, 0.65);
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
+    .carousel-item-inner {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      max-width: 85%;
+      padding: 0 15px;
+      margin: 0 auto;
+
+      .slide-heading {
+        font-size: 44px;
+        color: #fff;
+        h1,
+        h2 {
+          font-size: 44px;
+          color: #fff;
+          @include media-breakpoint-up(xl) {
+            font-size: 100px;
+          }
+        }
+
+        @include media-breakpoint-up(xl) {
+          font-size: 100px;
+        }
+
+        p {
+          color: inherit;
+          font-size: inherit;
+        }
+      }
+
+      .slide-text {
+        font-size: 16px;
+        margin: 0;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 19px;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .carousel-caption {
+        position: static;
+      }
+    }
+  }
+}
+
+.carousel-control-prev-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'><path d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/></svg>");
+}
+.carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/></svg>");
+}

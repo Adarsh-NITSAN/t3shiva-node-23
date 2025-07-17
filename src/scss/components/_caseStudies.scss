@@ -1,0 +1,35 @@
+.case-section {
+  .sub-badge {
+    color: $tertiary-color;
+  }
+
+  .card-columns {
+    column-count: 1;
+
+    @include media-breakpoint-up(sm) {
+      column-count: 2;
+    }
+
+    .single-case {
+      display: inline-block;
+      .single-case__image {
+        overflow: hidden;
+        img {
+          will-change: transform;
+          transition: 0.8s cubic-bezier(0.39, 0.575, 0.565, 1);
+          transform: rotate(0deg) scale(1);
+          overflow: hidden;
+          border-radius: 10px;
+        }
+      }
+      &:hover {
+        @include tablet {
+          img {
+            transform: rotate(-3deg) scale(1.2);
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}

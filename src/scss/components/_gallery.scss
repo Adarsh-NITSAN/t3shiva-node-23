@@ -1,0 +1,31 @@
+.gallery-wrapper {
+  .img-in {
+    display: block;
+    width: 100%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+.lightbox-section {
+  .row {
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    width: auto;
+  }
+}
+
+.fancybox__backdrop {
+  background: rgba(0, 0, 0, 0.75) !important;
+}

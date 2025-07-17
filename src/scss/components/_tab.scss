@@ -1,0 +1,71 @@
+// .nav-tabs {
+//   border-bottom: 1px solid $border-color;
+
+//   .nav-item {
+//     margin-bottom: 1px;
+//   }
+
+//   .nav-link {
+//     border: 1px solid transparent;
+//     // @include border-top-radius($nav-tabs-border-radius);
+
+//     // @include hover-focus() {
+//     //   border-color: $nav-tabs-link-hover-border-color;
+//     // }
+
+//     &.disabled {
+//       color: $nav-link-disabled-color;
+//       background-color: transparent;
+//       border-color: transparent;
+//     }
+//   }
+
+//   .nav-link.active,
+//   .nav-item.show .nav-link {
+//     color: $nav-tabs-link-active-color;
+//     background-color: $nav-tabs-link-active-bg;
+//     border-color: $nav-tabs-link-active-border-color;
+//   }
+
+//   .dropdown-menu {
+//     // Make dropdown border overlap tab border
+//     margin-top: -$nav-tabs-border-width;
+//     // Remove the top rounded corners here since there is a hard edge above the menu
+//     @include border-top-radius(0);
+//   }
+// }
+
+.custom-nav-tabs {
+  @include mobile-lg {
+    border-bottom: 1px solid $border-color;
+    flex-wrap: nowrap;
+  }
+
+  .nav-link {
+    flex: 0 1 auto;
+    max-width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+    padding-top: 20px;
+    margin-bottom: -1px;
+    color: var(--texts-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include mobile-lg {
+      margin-right: 60px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+}

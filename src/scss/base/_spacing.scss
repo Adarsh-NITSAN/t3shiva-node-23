@@ -1,0 +1,59 @@
+@use "sass:meta";
+
+// frame space before class
+@mixin beforespacing($args...) {
+  @each $before in meta.keywords($args) {
+    .frame-space-before-#{nth($before,1)} {
+      padding-top: nth($before, 2) + px;
+    }
+  }
+}
+
+// frame space after class
+@mixin afterspacing($args...) {
+  @each $after in meta.keywords($args) {
+    .frame-space-after-#{nth($after,1)} {
+      padding-bottom: nth($after, 2) + px;
+    }
+  }
+}
+
+//pt
+@include beforespacing(
+  $tiny: 0,
+  $extra-small: 12,
+  $small: 25,
+  $medium: 40,
+  $large: 50,
+  $extra-large: 65
+);
+
+//pb
+@include afterspacing(
+  $tiny: 0,
+  $extra-small: 12,
+  $small: 25,
+  $medium: 40,
+  $large: 56,
+  $extra-large: 65
+);
+
+@include media-breakpoint-up(md) {
+  //pt
+  @include beforespacing(
+    $small: 25,
+    $extra-small: 50,
+    $medium: 75,
+    $large: 100,
+    $extra-large: 125
+  );
+
+  //pb
+  @include afterspacing(
+    $extra-small: 25px,
+    $small: 50,
+    $medium: 75,
+    $large: 100,
+    $extra-large: 125
+  );
+}

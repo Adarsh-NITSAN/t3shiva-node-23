@@ -1,0 +1,73 @@
+// teaser one
+
+.service-card-section {
+  border: 1px solid $border-color;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 10px;
+  transition: all ease-in-out 0.3s;
+
+  .card-image {
+    margin-bottom: 40px;
+  }
+
+  .service-card {
+    padding: 0 30px 40px;
+    color: $headings-color;
+
+    .btn {
+      padding: 12px 35px;
+      font-size: 17px;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 32px 54px rgba(22, 28, 45, 0.16);
+  }
+}
+
+// teaser two
+
+.three-col-teaser {
+  .widget-texts {
+    a {
+      min-width: 1px;
+    }
+  }
+}
+
+//  teaser three
+
+.feature-section {
+  .widget-icon {
+    border-radius: 15px;
+  }
+}
+
+// teaser four
+
+.teaser-with-image {
+  .teaser-image {
+    transition: all ease-in-out 0.4s;
+    img {
+      border-radius: 8px;
+    }
+
+    &:hover {
+      box-shadow: $box-shadow-2;
+    }
+  }
+
+  .teaser__steps {
+    max-width: 43px;
+    min-width: 43px;
+    max-height: 43px;
+    min-height: 43px;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

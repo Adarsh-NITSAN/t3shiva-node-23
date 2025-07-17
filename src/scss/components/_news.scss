@@ -1,0 +1,220 @@
+.news-section .three_column-layout .card-content,
+.news-section .four_column-layout .card-content,
+.news-section .full_width-layout .card-content,
+.news-section .no_margin_full_width-layout .card-content,
+.news-section .no_margin-layout .card-content {
+  .title {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 95px;
+    margin: 0 auto;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.news-section .news-wrapper {
+  // display: flex;
+  flex-wrap: wrap;
+  margin: 0 15px;
+  padding: 0;
+  list-style: none;
+
+  &.news-list-view {
+    display: flex;
+    margin: 0 -15px;
+    .blur {
+      display: block !important;
+      .news-list__image {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  .news-list-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &.list-view {
+    li {
+      flex: 0 0 100%;
+      max-width: 100%;
+
+      .location-card {
+        display: flex;
+        background: $white;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all ease-in-out 0.3s;
+
+        .card-img {
+          flex: 0 0 35%;
+          max-width: 35%;
+          width: 100%;
+
+          @include media-breakpoint-up(lg) {
+            flex: 0 0 25%;
+            max-width: 25%;
+          }
+
+          img {
+            border-radius: 10px;
+          }
+        }
+
+        .card-content {
+          flex: 0 0 65%;
+          max-width: 65%;
+          width: 100%;
+          padding: 22px 14% 15px 30px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+
+          @include media-breakpoint-up(lg) {
+            flex: 0 0 75%;
+            max-width: 75%;
+          }
+        }
+
+        &:hover {
+          box-shadow: 0 34px 33px -23px rgba(22, 28, 45, 0.13);
+          .card-content {
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  li {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 15px;
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
+}
+
+.news-section .change-view-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eae9e9;
+  margin-bottom: 25px;
+
+  button {
+    border: 1px solid #d5d7dd;
+    background-color: transparent;
+    padding: 8px;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.2s;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &.active {
+      background-color: rgba(71, 59, 240, 0.1);
+      border-color: rgba(71, 59, 240, 0.1);
+
+      img {
+        display: none;
+
+        &.active {
+          display: inline;
+        }
+      }
+    }
+
+    img {
+      display: inline;
+
+      &.active {
+        display: none;
+      }
+    }
+  }
+}
+
+.masonry-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+  width: auto;
+}
+
+.masonry-grid__column {
+  background-clip: padding-box;
+
+  // .masonry-image {
+  //   img {
+  //     border-top-left-radius: 10px;
+  //     border-top-right-radius: 10px;
+  //   }
+  // }
+
+  .card-content {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.location-card {
+  transition: all ease-in-out 0.3s;
+
+  .news-image {
+    span {
+      width: 100%;
+
+      img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+    }
+  }
+
+  .card-content {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  &:hover {
+    box-shadow: 0 34px 33px -23px rgba(22, 28, 45, 0.13);
+    .card-content {
+      background-color: $white;
+    }
+  }
+}
+
+.news-category-list {
+  padding: 0;
+  margin: 0;
+
+  li {
+    color: $body-color;
+    list-style-type: none;
+    width: auto !important;
+    padding: 0 !important;
+    flex: 1 1 auto !important;
+    max-width: 100% !important;
+  }
+}

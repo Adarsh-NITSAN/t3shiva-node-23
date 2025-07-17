@@ -1,0 +1,47 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+// import "../../../assets/fonts/icon-font/css/style.css";
+// import "../../../assets/fonts/typography-font/typo.css";
+// import "../../../assets/fonts/fontawesome-5/css/all.css";
+
+@import "../assets/fonts/icon-font/css/style.css";
+@import "../assets/fonts/fontawesome-5/css/all.css";
+
+// Theme controls
+@import "theme-mode-control/theme-mode-activation";
+@import "controls/theme-media-query";
+@import "controls/theme-spacing-control";
+@import "controls/theme-background-color";
+
+// base
+@import "base/variables";
+@import "base/fontsize";
+@import "base/typography";
+@import "base/spacing";
+
+// general
+@import "components/general";
+@import "theme-utilities/patterns";
+@import "theme-utilities/gradients";
+
+// components
+@import "components/button";
+@import "components/menu";
+@import "components/header";
+@import "components/footer";
+@import "components/heroSection";
+@import "components/teaser";
+@import "components/accordion";
+@import "components/tab";
+@import "components/video";
+@import "components/timeline";
+@import "components/callToAction";
+@import "components/slider";
+@import "components/testimonial";
+@import "components/pricing";
+@import "components/map";
+@import "components/caseStudies";
+@import "components/gallery";
+@import "components/news";
+@import "components/contact";
+@import "components/themeSwitcher";
+@import "components/parallax";

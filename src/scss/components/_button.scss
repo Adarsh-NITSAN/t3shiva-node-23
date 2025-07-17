@@ -1,0 +1,121 @@
+.btn {
+  min-width: 175px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.75rem 1.5625rem;
+  font-size: 1.1rem;
+  line-height: 1.88;
+  border-radius: 8px;
+  transition: all ease-in-out 0.3s;
+
+  &-link {
+    text-decoration: none;
+    font-weight: $bold-weight;
+
+    &.with-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-weight: $bold-weight;
+        margin-left: 16px;
+        transition: 0.4s;
+      }
+
+      &:hover {
+        i {
+          margin-left: 25px;
+        }
+      }
+    }
+
+    &.secondary:hover {
+      color: color-mix(in srgb, $secondary-color 80%, transparent);
+    }
+  }
+
+  &-icon {
+    i {
+      font-weight: $bold-weight;
+      margin-left: 15px;
+    }
+  }
+
+  &-primary {
+    background-color: $primary-color;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--primary) 75%, $white);
+      border: 1px solid transparent;
+    }
+  }
+
+  &-green {
+    background-color: $secondary-color;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--secondary) 75%, $white);
+      border: 1px solid transparent;
+    }
+  }
+
+  &-red {
+    background-color: $tertiary-color;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--tertiary) 75%, $white);
+      border: 1px solid transparent;
+    }
+  }
+
+  &-white {
+    border: 1px solid transparent;
+
+    &:hover {
+      color: $primary-color;
+      border: 1px solid transparent;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+}
+
+.btn-toggle {
+  width: 72px;
+  height: 33px;
+  border-radius: 17px;
+  background-color: rgba($blackish-blue, 0.15);
+  position: relative;
+  margin: 0 15px;
+
+  span {
+    width: 21px;
+    height: 21px;
+    background-color: $white;
+    position: absolute;
+    left: 0;
+    margin-left: 6px;
+    top: 0;
+    margin-top: 6px;
+    transition: 0.4s;
+    border-radius: 500px;
+    pointer-events: none;
+  }
+
+  &.active {
+    background: $primary-color;
+    span {
+      left: calc(100% - 33px);
+    }
+  }
+}

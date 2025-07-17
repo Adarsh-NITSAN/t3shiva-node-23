@@ -1,0 +1,52 @@
+{
+  "name": "server_cmp_i18n",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ducanh2912/next-pwa": "^10.2.6",
+    "@fancyapps/ui": "^5.0.35",
+    "@formatjs/intl-localematcher": "^0.4.2",
+    "@n8tb1t/use-scroll-position": "^2.0.3",
+    "aos": "^2.3.4",
+    "axios": "^1.5.1",
+    "bootstrap": "^5.3.3",
+    "cross-env": "^7.0.3",
+    "dompurify": "^3.0.6",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "google-map-react": "2.2.1",
+    "lodash": "^4.17.21",
+    "negotiator": "^0.6.3",
+    "next": "^14.1.4",
+    "next-intl": "^3.9.5",
+    "polished": "^4.2.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
+    "react-color": "^2.19.3",
+    "react-cookie-consent": "^8.0.1",
+    "react-countup": "^6.5.3",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "react-lazy-load-image-component": "^1.6.0",
+    "react-masonry-css": "^1.0.16",
+    "react-player": "^2.13.0",
+    "react-select": "^5.7.4",
+    "react-slick": "^0.29.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "sass": "^1.72.0",
+    "shortid": "^2.2.16",
+    "slick-carousel": "^1.8.1",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
+    "imagemin-mozjpeg": "^9.0.0",
+    "next-optimized-images": "^2.6.2"
+  }
+}
